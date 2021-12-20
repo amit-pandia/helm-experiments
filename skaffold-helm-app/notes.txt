@@ -1,0 +1,14 @@
+# Build app
+go build -o app main.go
+
+# Create docker image
+sudo docker build -t amitpandia/helloworldapp:v1 .
+
+# Run container
+sudo docker run -itd --name hwapp1 amitpandia/helloworldapp:v1
+
+# Check app is running in container
+sudo docker exec -it hwapp1 top
+
+# Push Container image to registry
+sudo docker push amitpandia/helloworldapp:v1
