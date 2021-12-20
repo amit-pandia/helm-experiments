@@ -6,3 +6,7 @@ skaffold init -f skaffold.yaml
 
 # start skaffold
 skaffold dev
+
+# start skaffold to use helm
+# this currently gets stuck if status check is not kept false
+skaffold dev --status-check=false

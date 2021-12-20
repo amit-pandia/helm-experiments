@@ -1,4 +1,4 @@
-apiVersion: skaffold/v2beta26
+apiVersion: skaffold/v2beta8
 kind: Config
 metadata:
   name: app
@@ -8,6 +8,12 @@ build:
     docker:
       dockerfile: Dockerfile
 deploy:
-  kubectl:
-    manifests:
-    - k8s-pod.yaml
+  helm:
+    releases:
+      - name: app
+        chartPath: ./helm-chart/app
+        valuesFiles:
+          - ./helm-chart/app/values.yaml
+        artifactOverrides:
+          image: amitpandia/helloworldapp
+
