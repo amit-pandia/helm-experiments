@@ -1,3 +1,6 @@
+# Create docker image
+sudo docker build -t amitpandia/helloworldapp:latest .
+
 # create namespace
 kubectl create namespace argocd
 
