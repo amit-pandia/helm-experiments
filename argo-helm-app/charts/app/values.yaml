@@ -5,4 +5,4 @@
 replicaCount: 1
 
 # uncomment this if not using skaffold
-image: amitpandia/helloworldapp:a6d355a1d2d62ef641c00bdb2504a1569261f0da
+image: amitpandia/helloworldapp:v1
